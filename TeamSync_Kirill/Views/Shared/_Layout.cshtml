@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewData["Title"] - TeamSync</title>
+	<link rel="stylesheet" href="@(nameof(TeamSync_Kirill)).styles.css" />
+	<script src="https://kit.fontawesome.com/74324e04b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="/Images/TeamSync_logo_header.png" alt="TeamSyncLogoHeader" />
+		</div>
+		<div>
+			@{
+				if (User.Identity.IsAuthenticated)
+				{
+					<h1>WELCOME, @User.Identity.Name</h1>
+				}
+				else
+				{
+					// ПОКРАСИТЬ пОКРАСИТЬ ЦВЕТ МЕТОДА
+					<h1>void DreamBigWorkSmart();</h1>
+				}
+
+			}
+
+		</div>
+		<div>
+			<div>
+				@{
+					if (User.Identity.IsAuthenticated)
+					{
+						<form asp-action="Logout" asp-controller="User" method="post">
+							<button type="submit">ВИЙТИ</button>
+						</form>
+					}
+					else
+					{
+						<a id="link" href="/user/auth"><i class="fa-solid fa-right-to-bracket"></i> ВХІД</a>
+						<a id="link" href="/user/register"><i class="fa-solid fa-id-card"></i> РЕЄСТРАЦІЯ</a>
+					}
+
+				}
+			</div>
+
+		</div>
+
+	</header>
+	<main>
+		@RenderBody()
+	</main>
+	<footer>
+		<p>&copy; 2024 - TeamSync</p>
+	</footer>
+</body>
+</html>

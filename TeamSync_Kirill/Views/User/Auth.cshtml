@@ -1,0 +1,20 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.Identity
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Auth";
+}
+
+<div>
+    <form action="Auth" method="post">
+        <label for="login">Логін</label>
+        <input type="text" id="login" name="login" placeholder="Введіть логін:" required />
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Введіть пароль:" required />
+
+        <button type="submit" value="register">УВІЙТИ</button>
+        <p>Забули пароль?</p>
+    </form>
+</div>

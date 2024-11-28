@@ -1,0 +1,59 @@
+﻿div {
+    font-family: 'Courier New';
+    color: rgba(244, 244, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    background: linear-gradient(217deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0) 70.71%), #20232A;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+input {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+    input:hover,
+    input:focus {
+        border-color: #A01D26;
+        box-shadow: 0 0 20px 5px #A01D26;
+        outline: none;
+    }
+
+button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: rgba(244, 244, 239);
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #A01D26;
+        transform: scale(1.25);
+    }
+
+#repeat_password {
+    margin-top: 20px;
+}
